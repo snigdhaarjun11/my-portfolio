@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Vault — Stage I</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="custom-cursor"></div>
+    <div id="spotlight"></div>
+    <canvas id="particle-canvas"></canvas>
+
+    <nav class="navbar">
+        <div class="logo" data-cursor="✦">SA</div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about-education">About & Edu</a></li>
+            <li><a href="/interests">Interests</a></li>
+            <li><a href="/art-vault-1" class="active">Art Vault I</a></li>
+            <li><a href="/art-vault-2">Art Vault II</a></li>
+            <li><a href="/journey">Journey</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="page-section page-transition">
+        <div class="header-action-group">
+            <h2 class="section-title">03 / Dynamic Gallery — Stage I</h2>
+            <label class="art-upload-btn magnetic-btn" data-cursor="UPLOAD">
+                + Add Artwork
+                <input type="file" id="art-uploader-1" accept="image/*" multiple style="display: none;">
+            </label>
+        </div>
+
+        <div class="art-grid-motion" id="gallery-grid-1">
+            <div class="art-card tilt-node" data-cursor="VIEW">
+                <div class="art-wrapper">
+                    <div class="art-placeholder-interactive">
+                        <span>Click "+ Add Artwork" to import images into your personal vault gallery.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <a href="/" class="floating-home-btn" data-cursor="HOME">▲</a>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

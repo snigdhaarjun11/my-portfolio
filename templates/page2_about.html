@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About & Education</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="custom-cursor"></div>
+    <div id="spotlight"></div>
+    <canvas id="particle-canvas"></canvas>
+
+    <nav class="navbar">
+        <div class="logo" data-cursor="✦">SA</div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about-education" class="active">About & Edu</a></li>
+            <li><a href="/interests">Interests</a></li>
+            <li><a href="/art-vault-1">Art Vault I</a></li>
+            <li><a href="/art-vault-2">Art Vault II</a></li>
+            <li><a href="/journey">Journey</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="page-section page-transition">
+        <h2 class="section-title">01 / About & Education</h2>
+        <div class="about-grid">
+            <div class="headshot-container tilt-node" data-cursor="HOVER">
+                <div class="headshot-frame">
+                    <img src="{{ url_for('static', filename='headshot.jpg') }}" alt="Snigdha Adhikari" class="headshot-img" onerror="this.src='https://via.placeholder.com/300x380/1a1a2e/ffffff?text=Headshot+Image'">
+                    <div class="glitch-overlay"></div>
+                </div>
+            </div>
+            <div class="interactive-desktop">
+                <div class="desktop-header">
+                    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                    <span class="window-title">system_terminal.sh</span>
+                </div>
+                <div class="desktop-icons">
+                    <button class="icon-btn" onclick="openModal('edu')" data-cursor="OPEN">📁 Education.sys</button>
+                    <button class="icon-btn" onclick="openModal('cert')" data-cursor="OPEN">📁 Certificates.sys</button>
+                    <button class="icon-btn" onclick="openModal('bio')" data-cursor="OPEN">📄 Profile.txt</button>
+                </div>
+                <div id="desktop-display" class="desktop-screen">
+                    <p class="typing-text">> System initialized. Select a file above to inspect details...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <a href="/" class="floating-home-btn" data-cursor="HOME">▲</a>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

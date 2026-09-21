@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snigdha Adhikari — Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="night">
+    <div id="custom-cursor"></div>
+    <div id="spotlight"></div>
+    <canvas id="particle-canvas"></canvas>
+
+    <nav class="navbar">
+        <div class="logo" data-cursor="✦">SA</div>
+        <ul class="nav-links">
+            <li><a href="/" class="active">Home</a></li>
+            <li><a href="/about-education">About & Edu</a></li>
+            <li><a href="/interests">Interests</a></li>
+            <li><a href="/art-vault-1">Art Vault I</a></li>
+            <li><a href="/art-vault-2">Art Vault II</a></li>
+            <li><a href="/journey">Journey</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="page-section hero-section page-transition">
+        <div class="hero-content">
+            <h1 class="interactive-name" data-cursor="✦">Snigdha Adhikari</h1>
+            <div class="floating-words">
+                <span class="float-tag" style="--d:1;" data-cursor="EXPLORE">ONCOLOGY RESEARCH</span>
+                <span class="float-tag" style="--d:2;" data-cursor="EXPLORE">FINE ART</span>
+                <span class="float-tag" style="--d:3;" data-cursor="EXPLORE">WRITING</span>
+                <span class="float-tag" style="--d:4;" data-cursor="EXPLORE">CREATIVE CODE</span>
+            </div>
+            <a href="/about-education" class="cta-btn magnetic-btn" data-cursor="ENTER">Enter My World →</a>
+        </div>
+
+        <div class="widget-music" data-cursor="PLAYER">
+            <div class="widget-header">
+                <span class="pulse-dot"></span> ♫ CURRENTLY LISTENING
+            </div>
+            <div class="widget-body">
+                <div class="album-art-container">
+                    <div class="album-art"></div>
+                </div>
+                <div class="track-info">
+                    <p class="track-title">Clair de Lune</p>
+                    <p class="track-artist">Claude Debussy</p>
+                    <div class="progress-bar"><div class="progress"></div></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

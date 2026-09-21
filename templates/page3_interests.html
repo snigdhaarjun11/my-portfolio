@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interests & Hobbies</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="custom-cursor"></div>
+    <div id="spotlight"></div>
+    <canvas id="particle-canvas"></canvas>
+
+    <nav class="navbar">
+        <div class="logo" data-cursor="✦">SA</div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about-education">About & Edu</a></li>
+            <li><a href="/interests" class="active">Interests</a></li>
+            <li><a href="/art-vault-1">Art Vault I</a></li>
+            <li><a href="/art-vault-2">Art Vault II</a></li>
+            <li><a href="/journey">Journey</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="page-section page-transition">
+        <h2 class="section-title">02 / Pursuits & Core Domains</h2>
+        <div class="card-deck">
+            <div class="hobby-card tilt-node" data-cursor="INSPECT">
+                <div class="card-badge">RESEARCH</div>
+                <h3>Oncology Research</h3>
+                <p>Investigating cellular pathways, targeted cancer therapies, and precision biomarkers with analytical rigor.</p>
+            </div>
+            <div class="hobby-card tilt-node" data-cursor="INSPECT">
+                <div class="card-badge">FINE ART</div>
+                <h3>Sketching & Visual Art</h3>
+                <p>Translating anatomical form, complex graphite shading, and conceptual depth onto traditional and digital canvases.</p>
+            </div>
+            <div class="hobby-card tilt-node" data-cursor="INSPECT">
+                <div class="card-badge">LITERATURE</div>
+                <h3>Writing & Essayism</h3>
+                <p>Exploring scientific literature, creative prose, and philosophical essays bridging art and medicine.</p>
+            </div>
+        </div>
+    </main>
+
+    <a href="/" class="floating-home-btn" data-cursor="HOME">▲</a>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

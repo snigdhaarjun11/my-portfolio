@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Vault — Stage II</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="custom-cursor"></div>
+    <div id="spotlight"></div>
+    <canvas id="particle-canvas"></canvas>
+
+    <nav class="navbar">
+        <div class="logo" data-cursor="✦">SA</div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about-education">About & Edu</a></li>
+            <li><a href="/interests">Interests</a></li>
+            <li><a href="/art-vault-1">Art Vault I</a></li>
+            <li><a href="/art-vault-2" class="active">Art Vault II</a></li>
+            <li><a href="/journey">Journey</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="page-section page-transition">
+        <div class="header-action-group">
+            <h2 class="section-title">04 / Dynamic Gallery — Stage II</h2>
+            <label class="art-upload-btn magnetic-btn" data-cursor="UPLOAD">
+                + Add Artwork
+                <input type="file" id="art-uploader-2" accept="image/*" multiple style="display: none;">
+            </label>
+        </div>
+
+        <div class="art-3d-deck" id="gallery-grid-2">
+            <div class="art-card tilt-node" data-cursor="VIEW">
+                <div class="art-wrapper">
+                    <div class="art-placeholder-interactive">
+                        <h3>Anatomical & Graphical Collections</h3>
+                        <p>Upload artwork to populate Stage II.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <a href="/" class="floating-home-btn" data-cursor="HOME">▲</a>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
